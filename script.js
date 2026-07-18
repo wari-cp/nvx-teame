@@ -59,16 +59,6 @@ enter.addEventListener("click", async () => {
 
 });
 
-    music.play().catch(() => {});
-
-    loader.style.opacity = "0";
-
-    setTimeout(() => {
-        loader.style.display = "none";
-        website.style.display = "block";
-    }, 800);
-
-});
 
 // ظهور العناصر عند النزول
 const observer = new IntersectionObserver((entries) => {
