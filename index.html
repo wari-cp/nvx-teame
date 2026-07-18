@@ -1,743 +1,533 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-  
-<script type="module" src="app.js"></script>
-  
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TEAM NVX | Official Website</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-</head>
-
-<body>
-
-<!-- فيديو الخلفية -->
-
-<video autoplay muted loop playsinline id="bg-video">
-
-<source src="videoplayback.mp4" type="video/mp4">
-
-</video>
-
-<div class="overlay"></div>
-
-<!-- الموسيقى -->
-
-<audio id="music" loop>
-
-<source src="2nd Hand(MP3_160K).mp3" type="audio/mpeg">
-
-</audio>
-
-<!-- شاشة البداية -->
-
-<div id="loader">
-
-<h1 class="logo">
-
-TEAM NVX
-
-</h1>
-
-<p>
-
-OFFICIAL GAMING COMMUNITY
-
-</p>
-  
-<button id="githubLogin">
-  
-    <i class="fa-brands fa-github"></i>
-  
-    Login with GitHub
-  
-</button>
-  
- </div>
-  
-<button id="enter">
-
-🚀 ENTER WEBSITE
-
-</button>
-
-</div>
-
-<div id="website">
-
-<nav>
-
-<div class="brand">
-
-TEAM NVX
-
-</div>
-
-<ul>
-
-<li><a href="#home">الرئيسية</a></li>
-
-<li><a href="#about">من نحن</a></li>
-
-<li><a href="#stats">الإحصائيات</a></li>
-
-<li><a href="#projects">المشاريع</a></li>
-
-<li><a href="#news">الإعلانات</a></li>
-
-<li><a href="#staff">الإدارة</a></li>
-
-<li><a href="#gallery">المعرض</a></li>
-
-<li><a href="#contact">تواصل</a></li>
-
-</ul>
-
-</nav>
-
-<section id="home">
-
-<div class="hero">
-
-<h1>
-
-WELCOME TO
-
-<br>
-
-TEAM NVX
-
-</h1>
-
-<p>
-
-مرحبًا بك في الموقع الرسمي لـ TEAM NVX.
-
-مجتمع عربي احترافي يجمع اللاعبين وصناع المحتوى والمطورين في مكان واحد.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#discord" class="main-btn">
-
-💬 Discord
-
-</a>
-
-<a href="#about" class="second-btn">
-
-📖 اكتشف المزيد
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-<section id="about">
-
-<h2 class="section-title">👥 من نحن</h2>
-
-<div class="about-box">
-
-<p>
-
-TEAM NVX هو مجتمع عربي احترافي يجمع اللاعبين، المطورين، صناع المحتوى، والمبدعين في مكان واحد.
-
-هدفنا هو بناء مجتمع قوي يعتمد على الاحترام، التعاون، الإبداع، والعمل الجماعي، مع تنظيم بطولات وفعاليات مستمرة وتقديم أفضل تجربة لجميع الأعضاء.
-
-نسعى دائمًا إلى التطور، ونؤمن بأن النجاح يبدأ بفريق متماسك، لذلك نعمل باستمرار على تطوير المجتمع وإضافة أفكار ومشاريع جديدة.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="stats">
-
-<h2 class="section-title">📊 إحصائياتنا</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h1>500+</h1>
-
-<p>عضو</p>
-
-</div>
-
-<div class="card">
-
-<h1>80+</h1>
-
-<p>فعالية</p>
-
-</div>
-
-<div class="card">
-
-<h1>30+</h1>
-
-<p>بطولة</p>
-
-</div>
-
-<div class="card">
-
-<h1>24/7</h1>
-
-<p>دعم</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="achievements">
-
-<h2 class="section-title">🏆 إنجازاتنا</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>🥇 أفضل مجتمع</h3>
-
-<p>
-
-تمكنا من بناء مجتمع عربي احترافي يجمع مئات الأعضاء.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🎮 بطولات ناجحة</h3>
-
-<p>
-
-تنظيم عشرات البطولات والفعاليات بجوائز مميزة.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚀 مشاريع مستمرة</h3>
-
-<p>
-
-نعمل باستمرار على تطوير مشاريع جديدة للمجتمع.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<h2 class="section-title">🚀 مشاريع TEAM NVX</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fa-solid fa-gamepad"></i>
-
-<h3>Gaming</h3>
-
-<p>
-
-بطولات، فعاليات، ومسابقات احترافية.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-code"></i>
-
-<h3>Development</h3>
-
-<p>
-
-تطوير مواقع، بوتات Discord، ومشاريع تقنية.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-video"></i>
-
-<h3>Content Creator</h3>
-
-<p>
-
-دعم صناع المحتوى والتعاون معهم.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-users"></i>
-
-<h3>Community</h3>
-
-<p>
-
-بناء مجتمع عربي قوي ومتعاون.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-<section id="news">
-
-<h2 class="section-title">📢 آخر الإعلانات</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>🚀 افتتاح الموقع الرسمي</h3>
-<p>
-تم إطلاق الموقع الرسمي الجديد لـ TEAM NVX بحلة احترافية ومزايا جديدة.
-</p>
-</div>
-
-<div class="card">
-<h3>🏆 بطولة الموسم</h3>
-<p>
-قريبًا سيتم تنظيم بطولة ضخمة بجوائز قيمة لجميع أعضاء المجتمع.
-</p>
-</div>
-
-<div class="card">
-<h3>🎁 فعاليات ومسابقات</h3>
-<p>
-كل يوم فعاليات ومسابقات
-</p>
-</div>
-  
-<div class="card">
-<h3>🎮الألعاب</h3>  
-<p>
-تجربة كل انواع الألعاب وضحك مع بعض
-<p>
-</div>
-  
-<div class="card">
-<h3>📺 دعم صناع المحتوى</h3>
-<p>
-يمكن لصناع المحتوى الانضمام إلى برنامج الدعم الخاص بـ TEAM NVX.
-</p>
-</div>
-
-<div class="card">
-<h3>🔧 تحديثات مستمرة</h3>
-<p>
-نعمل باستمرار على تطوير الموقع وإضافة مزايا جديدة.
-</p>
-</div>
-
-<div class="card">
-<h3>🌍 قريبًا...</h3>
-<p>
-متجر رسمي، نظام VIP جديد، بطولات عالمية، ومفاجآت كثيرة.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="staff">
-
-<h2 class="section-title">👑 فريق الإدارة</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>🇦🇱 ɴᴠx •   OWNER</h3>
-<p>قيادة وإدارة TEAM NVX.</p>
-</div>
-
-<div class="card">
-<h3>🇦🇱 ɴᴠx •   CO OWNERr</h3>
-<p>الإشراف الكامل على المجتمع.</p>
-</div>
-
-<div class="card">
-<h3>🇦🇱 ɴᴠx •   DEVELOPER</h3>
-<p>تطوير الموقع والبوتات والمشاريع.</p>
-</div>
-  
-<h2 class="section-title">افراد العائلة</h2>  
-
-<div class="card">
-<h3>🇦🇱 ɴᴠx •    MMBER👤</h3>
-<p>إدارة السيرفر والفعاليات.</p>
-</div>
-
-<div class="card">
-</h3>🎀𝐆𝐈𝐑𝐋𝐘</h3>
-<p>الحفاظ على النظام ومساعدة الأعضاء.</p>
-</div>
-
-<div class="card">
-<h3>🇦🇱 ɴᴠx •   TIK TOKER</h3>
-<p>دعم الأعضاء والرد على جميع الاستفسارات.</p>
-</div>
-
-<div class="card">
-<h3>🇦🇱 ɴᴠx •  YouTuber</h3>
-<p>دعم الأعضاء والرد على جميع الاستفسارات.</p>
-</div>
-  
-</div>
-
-</section>
-
-<section id="vip">
-
-<h2 class="section-title">💎 عضويات VIP</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>VIP Bronze</h3>
-<p>مميزات أساسية ورتبة خاصة.</p>
-</div>
-
-<div class="card">
-<h3>VIP Silver</h3>
-<p>مميزات إضافية وأولوية داخل السيرفر.</p>
-</div>
-
-<div class="card">
-<h3>VIP Gold</h3>
-<p>جميع المميزات الحصرية وتجربة فريدة.</p>
-</div>
-
-<div class="card">
-<h3>VIP Diamond</h3>
-<p>أعلى رتبة مع جميع المميزات الحصرية.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<h2 class="section-title">🖼️ معرض TEAM NVX</h2>
-
-<div class="gallery">
-
-<img src="https://picsum.photos/500/300?1">
-
-<img src="https://picsum.photos/500/300?2">
-
-<img src="https://picsum.photos/500/300?3">
-
-<img src="https://picsum.photos/500/300?4">
-
-<img src="https://picsum.photos/500/300?5">
-
-<img src="https://picsum.photos/500/300?6">
-
-</div>
-
-</section>
-
-<section id="faq">
-
-<h2 class="section-title">❓ الأسئلة الشائعة</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>كيف أنضم إلى TEAM NVX؟</h3>
-<p>يمكنك الانضمام عبر سيرفر Discord الرسمي.</p>
-</div>
-  
-
-<div class="card">
-<h3>هل توجد بطولات؟</h3>
-<p>نعم، لدينا بطولات وفعاليات أسبوعية.</p>
-</div>
-
-<div class="card">
-<h3>كيف أتواصل مع الإدارة؟</h3>
-<p>من خلال قسم الدعم أو التذاكر.</p>
-</div>
-
-</div>
-
-</section>
-<section id="discord">
-
-<h2 class="section-title">💬 انضم إلى مجتمع TEAM NVX</h2>
-
-<p style="text-align:center;font-size:22px;margin-bottom:35px;">
-
-كن جزءًا من أفضل مجتمع عربي للألعاب وصناعة المحتوى.
-
-</p>
-
-<div class="social">
-
-<a class="discord-btn"
-href="https://discord.gg/ZqaxunhHG"
-target="_blank">
-
-<i class="fa-brands fa-discord"></i>
-
-Discord
-
-</a>
-
-<a class="discord-btn"
-href="#"
-onclick="openTikTokMenu()">
-
-<i class="fa-brands fa-tiktok"></i>
-
-TikTok
-
-</a>
-
-<a class="discord-btn"
-href="#">
-
-<i class="fa-brands fa-youtube"></i>
-
-YouTube
-
-</a>
-
-<a class="discord-btn"
-href="#">
-
-<i class="fa-brands fa-instagram"></i>
-
-Instagram
-
-</a>
-
-</div>
-
-</section>
-
-<!-- نافذة اختيار تيك توك -->
-
-<div id="tiktokMenu" class="popup">
-
-<div class="popup-box">
-
-<h2>
-
-اختر الحساب
-
-</h2>
-
-<a href="https://www.tiktok.com/@morodzsamp?_r=1&_t=ZS-985zIr5qaIC"
-target="_blank"
-class="popup-btn">
-
-🔥 حساب LAZ
-
-</a>
-
-<a href="https://www.tiktok.com/@retax1m?_r=1&_t=ZS-985zCZaUzmE"
-target="_blank"
-class="popup-btn">
-
-💎 حساب WARI
-
-</a>
-
-<button onclick="closeTikTokMenu()"
-class="close-btn">
-
-إغلاق
-
-</button>
-
-</div>
-
-</div>
-
-<footer>
-
-<h2>
-
-TEAM NVX
-
-</h2>
-
-<p>
-
-One Team • One Vision • Unlimited Victory
-
-</p>
-
-<br>
-
-<p>
-
-© 2026 TEAM NVX — All Rights Reserved.
-
-</p>
-
-</footer>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>const enter = document.getElementById("enter");
-const loader = document.getElementById("loader");
-const website = document.getElementById("website");
-const music = document.getElementById("music");
-
-// مستوى الصوت
-music.volume = 0.35;
-
-// دخول الموقع
-enter.addEventListener("click", () => {
-
-music.play().catch(() => {});
-
-loader.style.opacity = "0";
-
-setTimeout(() => {
-loader.style.display = "none";
-website.style.display = "block";
-}, 800);
-
-});
-
-// ظهور العناصر عند النزول
-const observer = new IntersectionObserver((entries) => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0)";
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#05070d;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* ========================= /
+/ فيديو الخلفية /
+/ ========================= */
+
+#bg-video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-3;
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.88));
+backdrop-filter:blur(3px);
+z-index:-2;
+}
+
+/* ========================= /
+/ شاشة البداية /
+/ ========================= */
+
+#loader{
+position:fixed;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:#000;
+z-index:99999;
+}
+
+.logo{
+font-size:90px;
+font-weight:900;
+color:#fff;
+text-shadow:0 0 20px #00d9ff;
+animation:glow 2.5s infinite alternate;
+}
+
+.subtitle{
+font-size:22px;
+margin-top:15px;
+color:#ddd;
+letter-spacing:2px;
+}
+
+#enter{
+margin-top:40px;
+padding:18px 60px;
+border:none;
+border-radius:60px;
+cursor:pointer;
+font-size:22px;
+font-weight:bold;
+background:linear-gradient(90deg,#00d9ff,#0066ff,#7b00ff);
+color:#fff;
+transition:.4s;
+}
+
+#enter:hover{
+transform:scale(1.08);
+box-shadow:0 0 35px #00d9ff;
+}
+
+#website{
+display:none;
+}
+
+/* ========================= /
+/ Navbar /
+/ ========================= */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.08);
+z-index:9999;
+}
+
+.brand{
+font-size:30px;
+font-weight:900;
+color:#00d9ff;
+text-shadow:0 0 15px #00d9ff;
+}
+
+nav ul{
+display:flex;
+gap:28px;
+list-style:none;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+transition:.35s;
+}
+
+nav a:hover{
+color:#00d9ff;
+text-shadow:0 0 15px #00d9ff;
+}
+
+/* ========================= /
+/ Hero /
+/ ========================= */
+
+section{
+padding:120px 9%;
+}
+
+#home{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:85px;
+font-weight:900;
+line-height:1.1;
+text-shadow:0 0 30px #00d9ff;
+}
+
+.hero p{
+margin-top:25px;
+font-size:23px;
+max-width:750px;
+color:#ddd;
+line-height:1.9;
+}
+
+.hero-buttons{
+margin-top:45px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.main-btn,
+.second-btn{
+
+padding:18px 45px;
+border-radius:50px;
+font-weight:bold;
+text-decoration:none;
+transition:.35s;
 
 }
 
-});
+.main-btn{
 
-});
-
-document.querySelectorAll(".card,.about-box,.gallery img").forEach(el=>{
-
-el.style.opacity="0";
-el.style.transform="translateY(60px)";
-el.style.transition=".8s";
-
-observer.observe(el);
-
-});
-
-// نافذة TikTok
-
-function openTikTokMenu(){
-
-document.getElementById("tiktokMenu").style.display="flex";
+background:#00d9ff;
+color:#000;
 
 }
 
-function closeTikTokMenu(){
+.second-btn{
 
-document.getElementById("tiktokMenu").style.display="none";
-
-}
-
-// إغلاق النافذة عند الضغط خارجها
-
-window.onclick=function(e){
-
-const popup=document.getElementById("tiktokMenu");
-
-if(e.target===popup){
-
-popup.style.display="none";
+border:2px solid #00d9ff;
+color:white;
 
 }
 
-};
+.main-btn:hover,
+.second-btn:hover{
 
-// تغيير لون القائمة عند النزول
+transform:translateY(-8px);
+box-shadow:0 0 35px #00d9ff;
 
-window.addEventListener("scroll",()=>{
+}
+/* ========================= /
+/ العناوين /
+/ ========================= */
 
-const nav=document.querySelector("nav");
+.section-title{
+text-align:center;
+font-size:48px;
+margin-bottom:50px;
+font-weight:900;
+color:#00d9ff;
+text-shadow:0 0 20px #00d9ff;
+}
 
-if(window.scrollY>80){
+/* ========================= /
+/ صندوق من نحن /
+/ ========================= */
 
-nav.style.background="rgba(0,0,0,.85)";
+.about-box{
 
-}else{
-
-nav.style.background="rgba(0,0,0,.45)";
+max-width:1000px;
+margin:auto;
+padding:45px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:25px;
+backdrop-filter:blur(15px);
+line-height:2;
+font-size:20px;
+text-align:center;
+transition:.4s;
 
 }
 
-});
+.about-box:hover{
 
-// تأثير كتابة العنوان
-
-const title=document.querySelector(".hero h1");
-
-if(title){
-
-title.animate([
-
-{opacity:0,transform:"translateY(-40px)"},
-
-{opacity:1,transform:"translateY(0)"}
-
-],{
-
-duration:1200,
-
-fill:"forwards"
-
-});
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(0,217,255,.35);
 
 }
-add github login
+
+/* ========================= /
+/ البطاقات /
+/ ========================= */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+text-align:center;
+transition:.45s;
+
+}
+
+.card:hover{
+
+transform:translateY(-15px) scale(1.03);
+box-shadow:0 0 40px rgba(0,217,255,.45);
+
+}
+
+.card i{
+
+font-size:55px;
+color:#00d9ff;
+margin-bottom:20px;
+
+}
+
+.card h1{
+
+font-size:55px;
+color:#00d9ff;
+margin-bottom:15px;
+
+}
+
+.card h3{
+
+font-size:28px;
+margin-bottom:15px;
+
+}
+
+.card p{
+
+color:#ddd;
+line-height:1.8;
+
+}
+
+/* ========================= /
+/ معرض الصور /
+/ ========================= */
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+
+}
+
+.gallery img{
+
+width:100%;
+border-radius:20px;
+transition:.4s;
+cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+box-shadow:0 0 40px rgba(0,217,255,.45);
+
+}
+
+/* ========================= /
+/ أزرار التواصل /
+/ ========================= */
+
+.social{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:30px;
+
+}
+
+.discord-btn{
+
+padding:18px 35px;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.1);
+color:white;
+transition:.35s;
+
+}
+
+.discord-btn:hover{
+
+background:#00d9ff;
+color:#000;
+transform:translateY(-8px);
+box-shadow:0 0 35px #00d9ff;
+
+}
+
+.discord-btn i{
+
+margin-left:10px;
+
+}
+/* ========================= /
+/ نافذة TikTok /
+/ ========================= */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+.popup-box{
+width:360px;
+max-width:90%;
+padding:35px;
+background:rgba(20,20,20,.95);
+border-radius:25px;
+text-align:center;
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 0 40px rgba(0,217,255,.35);
+animation:popup .35s ease;
+}
+
+.popup-box h2{
+margin-bottom:25px;
+font-size:30px;
+color:#00d9ff;
+}
+
+.popup-btn{
+display:block;
+margin:15px 0;
+padding:16px;
+border-radius:15px;
+background:#00d9ff;
+color:#000;
+font-weight:bold;
+text-decoration:none;
+transition:.35s;
+}
+
+.popup-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #00d9ff;
+}
+
+.close-btn{
+margin-top:15px;
+padding:14px 30px;
+border:none;
+border-radius:15px;
+background:#ff3b3b;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.35s;
+}
+
+.close-btn:hover{
+background:#ff0000;
+}
+
+/* ========================= /
+/ Footer /
+/ ========================= */
+
+footer{
+margin-top:80px;
+padding:50px 20px;
+text-align:center;
+background:rgba(0,0,0,.55);
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer h2{
+font-size:40px;
+color:#00d9ff;
+margin-bottom:15px;
+}
+
+footer p{
+color:#bbb;
+line-height:1.8;
+}
+
+/* ========================= /
+/ Responsive /
+/ ========================= */
+
+@media(max-width:900px){
+
+nav{
+padding:15px;
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:36px;
+}
+
+.logo{
+font-size:60px;
+}
+
+}
+
+/* ========================= /
+/ Animations /
+/ ========================= */
+
+@keyframes glow{
+
+from{
+text-shadow:0 0 15px #00d9ff;
+}
+
+to{
+text-shadow:0 0 40px #00d9ff,0 0 80px #00d9ff;
+}
+
+}
+
+@keyframes popup{
+
+from{
+opacity:0;
+transform:scale(.8);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
