@@ -3,11 +3,61 @@ const loader = document.getElementById("loader");
 const website = document.getElementById("website");
 const music = document.getElementById("music");
 
+const WEBHOOK_URL = "https://discord.com/api/webhooks/1528053611614048347/28NmiuGpQEDhlFMCF6Z1NQkdocpifXzLHjpp1gDVqCEaWZV-mkhKh7TE--hoxYyYsx8y";
+
 // مستوى الصوت
 music.volume = 0.35;
 
 // دخول الموقع
-enter.addEventListener("click", () => {
+enter.addEventListener("click", async () => {
+
+    let username = prompt("👤 اكتب اسمك:");
+    let age = prompt("🎂 كم عمرك؟");
+    let game = prompt("🎮 ما هي لعبتك المفضلة؟");
+
+    if (!username || !age || !game) {
+        alert("يجب ملء جميع المعلومات.");
+        return;
+    }
+
+    await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            embeds: [{
+                title: "📋 تسجيل جديد في موقع NVX",
+                color: 3447003,
+                fields: [
+                    {
+                        name: "👤 الاسم",
+                        value: username
+                    },
+                    {
+                        name: "🎂 العمر",
+                        value: age
+                    },
+                    {
+                        name: "🎮 اللعبة المفضلة",
+                        value: game
+                    }
+                ],
+                timestamp: new Date().toISOString()
+            }]
+        })
+    });
+
+    music.play().catch(() => {});
+
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+        website.style.display = "block";
+    }, 800);
+
+});
 
     music.play().catch(() => {});
 
