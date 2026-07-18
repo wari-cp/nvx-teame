@@ -374,7 +374,7 @@ box-shadow:0 0 35px #00d9ff;
 
 margin-left:10px;
 
-}
+                }
 /* ========================= */
 /* نافذة TikTok */
 /* ========================= */
@@ -530,21 +530,4 @@ opacity:1;
 transform:scale(1);
 }
 
-}
-#githubLogin{
-margin-top:20px;
-padding:18px 60px;
-border:none;
-border-radius:60px;
-cursor:pointer;
-font-size:20px;
-font-weight:bold;
-background:#24292e;
-color:white;
-transition:.35s;
-}
-
-#githubLogin:hover{
-transform:scale(1.05);
-box-shadow:0 0 25px #00d9ff;
-}
+  }
