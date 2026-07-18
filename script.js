@@ -43,23 +43,39 @@ if (user) {
         },
         body: JSON.stringify({
             embeds: [{
-                title: "📋 تسجيل جديد في موقع NVX",
-                color: 3447003,
-                fields: [
-                    {
-                        name: "👤 الاسم",
-                        value: username
-                    },
-                    {
-                        name: "🎂 العمر",
-                        value: age
-                    },
-                    {
-                        name: "🎮 اللعبة المفضلة",
-                        value: game
-                    }
-                ],
-                timestamp: new Date().toISOString()
+embeds: [{
+    title: "📝 تسجيل جديد في موقع TEAM NVX",
+    description: "تم تسجيل عضو جديد عبر الموقع الرسمي.",
+    color: 0x00BFFF,
+
+    thumbnail: {
+        url: "https://i.imgur.com/4M34hi2.png"
+    },
+
+    fields: [
+        {
+            name: "👤 الاسم",
+            value: `**${username}**`,
+            inline: true
+        },
+        {
+            name: "🎂 العمر",
+            value: `**${age}**`,
+            inline: true
+        },
+        {
+            name: "🎮 اللعبة المفضلة",
+            value: `**${game}**`,
+            inline: false
+        }
+    ],
+
+    footer: {
+        text: "TEAM NVX • Website Register"
+    },
+
+    timestamp: new Date().toISOString()
+}]
             }]
         })
     });
