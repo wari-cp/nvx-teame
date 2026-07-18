@@ -19,3 +19,18 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 const provider = new GithubAuthProvider();
+document.getElementById("githubLogin").addEventListener("click", async () => {
+
+try{
+
+const result = await signInWithPopup(auth, provider);
+
+alert("Welcome " + result.user.displayName);
+
+}catch(err){
+
+alert(err.message);
+
+}
+
+});
