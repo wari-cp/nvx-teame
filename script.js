@@ -11,14 +11,30 @@ music.volume = 0.35;
 // دخول الموقع
 enter.addEventListener("click", async () => {
 
-    let username = prompt("👤 اكتب اسمك:");
-    let age = prompt("🎂 كم عمرك؟");
-    let game = prompt("🎮 ما هي لعبتك المفضلة؟");
+let user = JSON.parse(localStorage.getItem("nvxUser"));
+
+let username, age, game;
+
+if (user) {
+    username = user.username;
+    age = user.age;
+    game = user.game;
+} else {
+    username = prompt("👤 اكتب اسمك:");
+    age = prompt("🎂 كم عمرك؟");
+    game = prompt("🎮 ما هي لعبتك المفضلة؟");
 
     if (!username || !age || !game) {
         alert("يجب ملء جميع المعلومات.");
         return;
     }
+
+    localStorage.setItem("nvxUser", JSON.stringify({
+        username,
+        age,
+        game
+    }));
+        }
 
     await fetch(WEBHOOK_URL, {
         method: "POST",
