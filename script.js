@@ -43,7 +43,6 @@ if (user) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            embeds: [{
 embeds: [{
     title: "📝 تسجيل جديد في موقع TEAM NVX",
     description: "تم تسجيل عضو جديد عبر الموقع الرسمي.",
