@@ -1,3 +1,4 @@
+localStorage.removeItem("nvxUser");
 const enter = document.getElementById("enter");
 const loader = document.getElementById("loader");
 const website = document.getElementById("website");
