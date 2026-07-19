@@ -1,4 +1,3 @@
-localStorage.removeItem("nvxUser");
 const enter = document.getElementById("enter");
 const loader = document.getElementById("loader");
 const website = document.getElementById("website");
@@ -12,70 +11,72 @@ music.volume = 0.35;
 // دخول الموقع
 enter.addEventListener("click", async () => {
 
-let user = JSON.parse(localStorage.getItem("nvxUser"));
+    let user = JSON.parse(localStorage.getItem("nvxUser"));
 
-let username, age, game;
+    let username, age, game;
 
-if (user) {
-    username = user.username;
-    age = user.age;
-    game = user.game;
-} else {
-    username = prompt("👤 اكتب اسمك:");
-    age = prompt("🎂 كم عمرك؟");
-    game = prompt("🎮 ما هي لعبتك المفضلة؟");
+    if (user) {
+        username = user.username;
+        age = user.age;
+        game = user.game;
+    } else {
+        username = prompt("👤 اكتب اسمك:");
+        age = prompt("🎂 كم عمرك؟");
+        game = prompt("🎮 ما هي لعبتك المفضلة؟");
 
-    if (!username || !age || !game) {
-        alert("يجب ملء جميع المعلومات.");
-        return;
-    }
-
-    localStorage.setItem("nvxUser", JSON.stringify({
-        username,
-        age,
-        game
-    }));
+        if (!username || !age || !game) {
+            alert("يجب ملء جميع المعلومات.");
+            return;
         }
 
-    await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },body: JSON.stringify({
-    embeds: [{
-        title: "📝 تسجيل جديد في موقع TEAM NVX",
-        description: "تم تسجيل عضو جديد عبر الموقع الرسمي.",
-        color: 0x00BFFF,
+        localStorage.setItem("nvxUser", JSON.stringify({
+            username,
+            age,
+            game
+        }));
 
-        thumbnail: {
-            url: "https://i.imgur.com/4M34hi2.png"
-        },
-
-        fields: [
-            {
-                name: "👤 الاسم",
-                value: `**${username}**`,
-                inline: true
+        await fetch(WEBHOOK_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
             },
-            {
-                name: "🎂 العمر",
-                value: `**${age}**`,
-                inline: true
-            },
-            {
-                name: "🎮 اللعبة المفضلة",
-                value: `**${game}**`,
-                inline: false
-            }
-        ],
+            body: JSON.stringify({
+                embeds: [{
+                    title: "📝 تسجيل جديد في موقع TEAM NVX",
+                    description: "تم تسجيل عضو جديد عبر الموقع الرسمي.",
+                    color: 0x00BFFF,
 
-        footer: {
-            text: "TEAM NVX • Website Register"
-        },
+                    thumbnail: {
+                        url: "https://i.imgur.com/4M34hi2.png"
+                    },
 
-        timestamp: new Date().toISOString()
-    }]
-})
+                    fields: [
+                        {
+                            name: "👤 الاسم",
+                            value: `**${username}**`,
+                            inline: true
+                        },
+                        {
+                            name: "🎂 العمر",
+                            value: `**${age}**`,
+                            inline: true
+                        },
+                        {
+                            name: "🎮 اللعبة المفضلة",
+                            value: `**${game}**`,
+                            inline: false
+                        }
+                    ],
+
+                    footer: {
+                        text: "TEAM NVX • Website Register"
+                    },
+
+                    timestamp: new Date().toISOString()
+                }]
+            })
+        });
+    }
 
     music.play().catch(() => {});
 
@@ -88,28 +89,25 @@ if (user) {
 
 });
 
-
 // ظهور العناصر عند النزول
 const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
-
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0)";
-
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
         }
 
     });
 
 });
 
-document.querySelectorAll(".card,.about-box,.gallery img").forEach(el=>{
+document.querySelectorAll(".card,.about-box,.gallery img").forEach(el => {
 
-    el.style.opacity="0";
-    el.style.transform="translateY(60px)";
-    el.style.transition=".8s";
+    el.style.opacity = "0";
+    el.style.transform = "translateY(60px)";
+    el.style.transition = ".8s";
 
     observer.observe(el);
 
@@ -117,68 +115,52 @@ document.querySelectorAll(".card,.about-box,.gallery img").forEach(el=>{
 
 // نافذة TikTok
 
-function openTikTokMenu(){
-
-document.getElementById("tiktokMenu").style.display="flex";
-
+function openTikTokMenu() {
+    document.getElementById("tiktokMenu").style.display = "flex";
 }
 
-function closeTikTokMenu(){
-
-document.getElementById("tiktokMenu").style.display="none";
-
+function closeTikTokMenu() {
+    document.getElementById("tiktokMenu").style.display = "none";
 }
 
 // إغلاق النافذة عند الضغط خارجها
 
-window.onclick=function(e){
+window.onclick = function (e) {
 
-const popup=document.getElementById("tiktokMenu");
+    const popup = document.getElementById("tiktokMenu");
 
-if(e.target===popup){
-
-popup.style.display="none";
-
-}
+    if (e.target === popup) {
+        popup.style.display = "none";
+    }
 
 };
 
 // تغيير لون القائمة عند النزول
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-const nav=document.querySelector("nav");
+    const nav = document.querySelector("nav");
 
-if(window.scrollY>80){
-
-nav.style.background="rgba(0,0,0,.85)";
-
-}else{
-
-nav.style.background="rgba(0,0,0,.45)";
-
-}
+    if (window.scrollY > 80) {
+        nav.style.background = "rgba(0,0,0,.85)";
+    } else {
+        nav.style.background = "rgba(0,0,0,.45)";
+    }
 
 });
 
 // تأثير كتابة العنوان
 
-const title=document.querySelector(".hero h1");
+const title = document.querySelector(".hero h1");
 
-if(title){
+if (title) {
 
-title.animate([
+    title.animate([
+        { opacity: 0, transform: "translateY(-40px)" },
+        { opacity: 1, transform: "translateY(0)" }
+    ], {
+        duration: 1200,
+        fill: "forwards"
+    });
 
-{opacity:0,transform:"translateY(-40px)"},
-
-{opacity:1,transform:"translateY(0)"}
-
-],{
-
-duration:1200,
-
-fill:"forwards"
-
-});
-
-                    }
+                         }
