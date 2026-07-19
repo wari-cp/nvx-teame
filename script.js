@@ -41,44 +41,41 @@ if (user) {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
+        },body: JSON.stringify({
+    embeds: [{
+        title: "📝 تسجيل جديد في موقع TEAM NVX",
+        description: "تم تسجيل عضو جديد عبر الموقع الرسمي.",
+        color: 0x00BFFF,
+
+        thumbnail: {
+            url: "https://i.imgur.com/4M34hi2.png"
         },
-        body: JSON.stringify({
-embeds: [{
-    title: "📝 تسجيل جديد في موقع TEAM NVX",
-    description: "تم تسجيل عضو جديد عبر الموقع الرسمي.",
-    color: 0x00BFFF,
 
-    thumbnail: {
-        url: "https://i.imgur.com/4M34hi2.png"
-    },
+        fields: [
+            {
+                name: "👤 الاسم",
+                value: `**${username}**`,
+                inline: true
+            },
+            {
+                name: "🎂 العمر",
+                value: `**${age}**`,
+                inline: true
+            },
+            {
+                name: "🎮 اللعبة المفضلة",
+                value: `**${game}**`,
+                inline: false
+            }
+        ],
 
-    fields: [
-        {
-            name: "👤 الاسم",
-            value: `**${username}**`,
-            inline: true
+        footer: {
+            text: "TEAM NVX • Website Register"
         },
-        {
-            name: "🎂 العمر",
-            value: `**${age}**`,
-            inline: true
-        },
-        {
-            name: "🎮 اللعبة المفضلة",
-            value: `**${game}**`,
-            inline: false
-        }
-    ],
 
-    footer: {
-        text: "TEAM NVX • Website Register"
-    },
-
-    timestamp: new Date().toISOString()
-}]
-            }]
-        })
-    });
+        timestamp: new Date().toISOString()
+    }]
+})
 
     music.play().catch(() => {});
 
